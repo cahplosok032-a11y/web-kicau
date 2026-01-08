@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burung Kicau Nusantara - Kualitas Terbaik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: #00A651;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00A651;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: white;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .search-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #00A651;
+        }
+
+        .search-btn {
+            padding: 1rem 2.5rem;
+            background: #00A651;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #008a44;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,166,81,0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 3rem 5%;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            padding: 2rem 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: #00A651;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #00A651;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #008a44;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,166,81,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #00A651;
+            border: 2px solid #00A651;
+        }
+
+        .btn-secondary:hover {
+            background: #00A651;
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 5%;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #00A651;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 5%;
+            background: #f8f9fa;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .product-info .price {
+            font-size: 1.5rem;
+            color: #00A651;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .product-info p {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .feature-item p {
+            color: #7f8c8d;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tips-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .tip-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .tip-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .tip-card p {
+            color: #7f8c8d;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .search-container {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                padding: 1rem;
+            }
+			
+			.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.nav-right a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.login-icon{
+    background:#00A651;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:50%;
+    font-size:18px;
+}
+
+.login-icon:hover{
+    background:#008a44;
+}
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html" class="logo">🦜 Kicau Nusantara</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="#burung">Burung</a>
+        <a href="#pakan">Pakan</a>
+        <a href="#aksesoris">Aksesoris</a>
+        <a href="#tips">Tips Perawatan</a>
+
+        <!-- LOGIN ICON -->
+        <a href="login.html" class="login-icon" title="Login Admin">
+            👤
+        </a>
+    </div>
+</nav>
+
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari burung, pakan, sangkar, atau perlengkapan lainnya...">
+            <button class="search-btn" onclick="searchProducts()">🔍 Cari</button>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge">✨ Burung Berkualitas Premium</div>
+                <h2>Pusat Penjualan Burung & Perlengkapan Terpercaya</h2>
+                <p>Kami menyediakan berbagai jenis burung kicau berkualitas tinggi dan perlengkapan lengkap. Sehat, aktif, dan siap berkicau untuk menemani hari-hari Anda.</p>
+                <div class="cta-buttons">
+                    <a href="#burung" class="btn btn-primary">
+                        🛒 Lihat Produk
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        💬 Tanya via WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FFD700;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%23FF6B35;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23004E89;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23grad)'/%3E%3Ctext x='300' y='200' font-size='120' text-anchor='middle' fill='white' font-family='Arial'%3E🦜%3C/text%3E%3C/svg%3E" alt="Burung Kicau Premium">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Pelanggan Puas</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Jenis Burung</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Garansi Sehat</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="burung">
+        <h2>Koleksi Burung Kami</h2>
+        <div class="product-grid" id="gridBurung">
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Burung Kenari</h3>
+                    <p>Kenari Yorkshire berkualitas, suara merdu dan jinak</p>
+                    <div class="price">Rp 850.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Burung%20Kenari%20seharga%20Rp%20850.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #00A651 0%, #006837 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Lovebird</h3>
+                    <p>Lovebird sepasang, warna cerah dan aktif</p>
+                    <div class="price">Rp 1.200.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Lovebird%20seharga%20Rp%201.200.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Murai Batu</h3>
+                    <p>Murai batu medan, ekor panjang dan gacor</p>
+                    <div class="price">Rp 2.500.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Murai%20Batu%20seharga%20Rp%202.500.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #4ECDC4 0%, #1A535C 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Pleci</h3>
+                    <p>Pleci dakun, suara kristal dan fighter</p>
+                    <div class="price">Rp 650.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Pleci%20seharga%20Rp%20650.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #845EC2 0%, #4B4453 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Cucak Hijau</h3>
+                    <p>Cucak hijau kalimantan, ngentrok rapat</p>
+                    <div class="price">Rp 1.800.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Cucak%20Hijau%20seharga%20Rp%201.800.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #F9F871 0%, #FF6B6B 100%);">🦜</div>
+                <div class="product-info">
+                    <h3>Kacer</h3>
+                    <p>Kacer poci, mental fighter dan gacor</p>
+                    <div class="price">Rp 1.500.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Kacer%20seharga%20Rp%201.500.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pakan & Vitamin Section -->
+    <section class="products" id="pakan" style="background: white;">
+        <h2>Pakan & Vitamin</h2>
+        <div class="product-grid" id="gridPakan">
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FFB347 0%, #FF8C00 100%);">🌾</div>
+                <div class="product-info">
+                    <h3>Voer Premium</h3>
+                    <p>Voer berkualitas tinggi dengan nutrisi lengkap untuk burung kicauan</p>
+                    <div class="price">Rp 75.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Voer%20Premium%20seharga%20Rp%2075.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #98D8C8 0%, #6BCB77 100%);">🐛</div>
+                <div class="product-info">
+                    <h3>Jangkrik Segar</h3>
+                    <p>Jangkrik hidup segar per 100 ekor, pakan favorit burung</p>
+                    <div class="price">Rp 25.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Jangkrik%20Segar%20seharga%20Rp%2025.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FF6B9D 0%, #C06C84 100%);">🐛</div>
+                <div class="product-info">
+                    <h3>Kroto Segar</h3>
+                    <p>Kroto fresh kualitas terbaik untuk extra fooding</p>
+                    <div class="price">Rp 50.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Kroto%20Segar%20seharga%20Rp%2050.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #A8E6CF 0%, #3FC1C9 100%);">💊</div>
+                <div class="product-info">
+                    <h3>Vitamin Burung</h3>
+                    <p>Multivitamin lengkap untuk menjaga stamina dan kesehatan</p>
+                    <div class="price">Rp 45.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Vitamin%20Burung%20seharga%20Rp%2045.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FFE66D 0%, #FFB347 100%);">🌻</div>
+                <div class="product-info">
+                    <h3>Biji Kenari</h3>
+                    <p>Biji kenari import kualitas premium 1kg</p>
+                    <div class="price">Rp 65.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Biji%20Kenari%20seharga%20Rp%2065.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #FFA07A 0%, #FF6347 100%);">🍎</div>
+                <div class="product-info">
+                    <h3>Buah Apel Premium</h3>
+                    <p>Apel segar pilihan untuk extra fooding burung</p>
+                    <div class="price">Rp 35.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Buah%20Apel%20Premium%20seharga%20Rp%2035.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sangkar & Aksesoris Section -->
+    <section class="products" id="aksesoris" style="background: #f8f9fa;">
+        <h2>Sangkar & Aksesoris</h2>
+        <div class="product-grid"  id="gridAksesoris">
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #C9A969 0%, #8B7355 100%);">🏠</div>
+                <div class="product-info">
+                    <h3>Sangkar Kotak Jati</h3>
+                    <p>Sangkar kayu jati ukuran 40x40x60cm, finishing natural</p>
+                    <div class="price">Rp 850.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Sangkar%20Kotak%20Jati%20seharga%20Rp%20850.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #B8B8B8 0%, #6C757D 100%);">🏠</div>
+                <div class="product-info">
+                    <h3>Sangkar Bulat Chrome</h3>
+                    <p>Sangkar bulat diameter 35cm, bahan chrome berkualitas</p>
+                    <div class="price">Rp 450.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Sangkar%20Bulat%20Chrome%20seharga%20Rp%20450.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);">💧</div>
+                <div class="product-info">
+                    <h3>Tempat Minum Otomatis</h3>
+                    <p>Tempat minum anti tumpah dengan sistem otomatis</p>
+                    <div class="price">Rp 65.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Tempat%20Minum%20Otomatis%20seharga%20Rp%2065.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #DDA15E 0%, #BC6C25 100%);">🍽️</div>
+                <div class="product-info">
+                    <h3>Cepuk Pakan Set</h3>
+                    <p>Set cepuk pakan dan minum keramik premium</p>
+                    <div class="price">Rp 45.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Cepuk%20Pakan%20Set%20seharga%20Rp%2045.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #E85D75 0%, #C32F4B 100%);">🪢</div>
+                <div class="product-info">
+                    <h3>Tangkringan Kayu</h3>
+                    <p>Tangkringan kayu alami diameter 1-2cm per set</p>
+                    <div class="price">Rp 25.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Tangkringan%20Kayu%20seharga%20Rp%2025.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);">🛁</div>
+                <div class="product-info">
+                    <h3>Bak Mandi Burung</h3>
+                    <p>Bak mandi gantung dengan kait stainless steel</p>
+                    <div class="price">Rp 35.000</div>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Bak%20Mandi%20Burung%20seharga%20Rp%2035.000" target="_blank" class="btn btn-primary">💬 Tanya via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Perawatan Section -->
+    <section class="tips-section" id="tips">
+        <h2>Tips Perawatan Burung</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">🌅</div>
+                <h3>Pemasteran Rutin</h3>
+                <p>Lakukan pemasteran di pagi hari saat burung masih fresh. Gunakan suara masteran berkualitas dan lakukan secara konsisten setiap hari untuk hasil maksimal.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">🍽️</div>
+                <h3>Pakan Berkualitas</h3>
+                <p>Berikan voer berkualitas sebagai pakan utama. Tambahkan extra fooding seperti jangkrik, kroto, dan buah-buahan segar untuk nutrisi lengkap dan seimbang.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">🛁</div>
+                <h3>Mandi Teratur</h3>
+                <p>Mandikan burung 2-3 kali seminggu di pagi hari. Setelah mandi, angin-anginkan burung sampai bulu kering, lalu jemur 1-2 jam untuk kesehatan optimal.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">☀️</div>
+                <h3>Penjemuran Tepat</h3>
+                <p>Jemur burung setiap pagi sekitar jam 7-9 selama 1-2 jam. Hindari menjemur terlalu lama untuk mencegah burung stres dan dehidrasi.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">🧹</div>
+                <h3>Kebersihan Sangkar</h3>
+                <p>Bersihkan sangkar minimal 2-3 hari sekali. Cuci cepuk pakan dan minum setiap hari. Sangkar bersih mencegah penyakit dan membuat burung nyaman.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">🌙</div>
+                <h3>Istirahat Cukup</h3>
+                <p>Kerodong burung pada malam hari agar istirahat berkualitas. Pastikan burung mendapat tidur 8-10 jam untuk menjaga stamina dan mental.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">💊</div>
+                <h3>Vitamin Rutin</h3>
+                <p>Berikan multivitamin 2-3 kali seminggu untuk meningkatkan daya tahan tubuh. Vitamin membantu menjaga stamina dan performa kicauan burung.</p>
+            </div>
+            
+            <div class="tip-card">
+                <div class="tip-icon">🎵</div>
+                <h3>Latihan Mental</h3>
+                <p>Latih mental burung dengan trek atau gantang bersama burung lain. Lakukan bertahap agar burung tidak stres dan mental terjaga stabil.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Mengapa Memilih Kami?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">✅</div>
+                <h3>Garansi Kesehatan</h3>
+                <p>Semua burung dijamin sehat dengan sertifikat kesehatan</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🚚</div>
+                <h3>Pengiriman Aman</h3>
+                <p>Pengiriman ke seluruh Indonesia dengan packaging khusus</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>Harga Terjangkau</h3>
+                <p>Harga bersaing dengan kualitas terbaik</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📞</div>
+                <h3>Konsultasi Gratis</h3>
+                <p>Dapatkan tips perawatan burung dari ahlinya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Burung Kicau Nusantara. Semua Hak Dilindungi.</p>
+        <p>📍 Surabaya, Jawa Timur | 📞 0812-3456-7890 | ✉️ info@burungkicau.com</p>
+    </footer>
+
+    <script>
+	
+	if(localStorage.getItem("isLogin") !== "true"){
+    window.location.href = "login.html";
+}
+
+/* =======================
+   LOAD DATA DARI ADMIN
+======================= */
+const dataBurung     = JSON.parse(localStorage.getItem('dataBurung')) || [];
+const dataPakan      = JSON.parse(localStorage.getItem('dataPakan')) || [];
+const dataAksesoris  = JSON.parse(localStorage.getItem('dataAksesoris')) || [];
+
+const WA_NUMBER = "6281234567890";
+
+/* =======================
+   FORMAT RUPIAH
+======================= */
+function rupiah(n) {
+    return "Rp " + Number(n).toLocaleString("id-ID");
+}
+
+/* =======================
+   RENDER PRODUK
+======================= */
+function renderProduk(data, targetId, emojiDefault) {
+    const grid = document.getElementById(targetId);
+    if (!grid) return;
+
+    if (data.length === 0) {
+        grid.innerHTML = `<p style="color:#777">Belum ada produk</p>`;
+        return;
+    }
+
+    grid.innerHTML = data.map(item => `
+        <div class="product-card">
+            <div class="product-image"
+                 style="background:${item.color || '#00A651'}">
+                ${item.gambar
+                    ? `<img src="${item.gambar}" style="width:100%;height:100%;object-fit:cover;">`
+                    : `<span style="font-size:3rem">${item.emoji || emojiDefault}</span>`
+                }
+            </div>
+            <div class="product-info">
+                <h3>${item.nama}</h3>
+                <p>${item.deskripsi}</p>
+                <div class="price">${rupiah(item.harga)}</div>
+                <a class="btn btn-primary"
+                   target="_blank"
+                   href="https://wa.me/${WA_NUMBER}?text=Halo,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.nama)}%20seharga%20${rupiah(item.harga)}">
+                   💬 Tanya via WhatsApp
+                </a>
+            </div>
+        </div>
+    `).join('');
+}
+
+/* =======================
+   SEARCH PRODUK
+======================= */
+function searchProducts() {
+    const keyword = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.product-card');
+
+    if (!keyword) {
+        resetSearch();
+        return;
+    }
+
+    let found = false;
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const desc  = card.querySelector('p').textContent.toLowerCase();
+
+        if (title.includes(keyword) || desc.includes(keyword)) {
+            card.style.display = "block";
+            card.style.border = "3px solid #00A651";
+            found = true;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    if (!found) {
+        alert("Produk tidak ditemukan");
+        resetSearch();
+    }
+}
+
+function resetSearch() {
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.style.display = "block";
+        card.style.border = "none";
+    });
+}
+
+/* =======================
+   EVENT SEARCH
+======================= */
+document.getElementById('searchInput')?.addEventListener('keyup', e => {
+    if (e.key === 'Enter') searchProducts();
+});
+
+document.getElementById('searchInput')?.addEventListener('input', e => {
+    if (e.target.value === '') resetSearch();
+});
+
+/* =======================
+   INIT
+======================= */
+document.addEventListener("DOMContentLoaded", () => {
+    renderProduk(dataBurung, "gridBurung", "🦜");
+    renderProduk(dataPakan, "gridPakan", "🌾");
+    renderProduk(dataAksesoris, "gridAksesoris", "🏠");
+});
+
+    </script>
+</body>
+</html>
